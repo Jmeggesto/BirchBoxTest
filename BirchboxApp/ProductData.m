@@ -20,11 +20,14 @@
         self.productDescription = data[@"description"];
         self.howToUse = data[@"how_to_use"];
         self.ingredients = data[@"ingredients"];
-        self.reviewCount = [NSString stringWithFormat:@"%ld", (long)data[@"review_count"]];
-        self.price = [NSString stringWithFormat:@"$%@", data[@"price"][@"amount"]];
+        self.reviewCount = [data[@"review_count"] integerValue];
+        self.price = [NSString stringWithFormat:@"$%@0", data[@"price"][@"amount"]];
         self.brand = data[@"brand"];
         self.pageButtonType = data[@"page_button_type"];
         self.imageURL = [data[@"carousel_image"] firstObject][@"url"];
+        
+        
+        
         
 
         return self;

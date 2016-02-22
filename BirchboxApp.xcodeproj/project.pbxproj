@@ -16,9 +16,8 @@
 		5D8FDB3F1C7B77D600FC790A /* BirchboxAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FDB3E1C7B77D600FC790A /* BirchboxAppTests.m */; };
 		5D8FDB4A1C7B77D600FC790A /* BirchboxAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FDB491C7B77D600FC790A /* BirchboxAppUITests.m */; };
 		5D8FDB591C7B7A3C00FC790A /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FDB581C7B7A3C00FC790A /* APIManager.m */; };
-		5D8FDB621C7B836C00FC790A /* BirchBoxCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FDB611C7B836C00FC790A /* BirchBoxCollectionViewController.m */; };
 		5D8FDB651C7B84CB00FC790A /* ProductData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FDB641C7B84CB00FC790A /* ProductData.m */; };
-		5D8FDB681C7B91DE00FC790A /* BirchBoxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FDB671C7B91DE00FC790A /* BirchBoxCollectionViewCell.m */; };
+		5D8FDB6B1C7BA10900FC790A /* BirchBoxProductPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FDB6A1C7BA10900FC790A /* BirchBoxProductPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +55,10 @@
 		5D8FDB4B1C7B77D600FC790A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D8FDB571C7B7A3C00FC790A /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		5D8FDB581C7B7A3C00FC790A /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
-		5D8FDB601C7B836C00FC790A /* BirchBoxCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirchBoxCollectionViewController.h; sourceTree = "<group>"; };
-		5D8FDB611C7B836C00FC790A /* BirchBoxCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirchBoxCollectionViewController.m; sourceTree = "<group>"; };
 		5D8FDB631C7B84CB00FC790A /* ProductData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductData.h; sourceTree = "<group>"; };
 		5D8FDB641C7B84CB00FC790A /* ProductData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductData.m; sourceTree = "<group>"; };
-		5D8FDB661C7B91DE00FC790A /* BirchBoxCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirchBoxCollectionViewCell.h; sourceTree = "<group>"; };
-		5D8FDB671C7B91DE00FC790A /* BirchBoxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirchBoxCollectionViewCell.m; sourceTree = "<group>"; };
+		5D8FDB691C7BA10900FC790A /* BirchBoxProductPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirchBoxProductPage.h; sourceTree = "<group>"; };
+		5D8FDB6A1C7BA10900FC790A /* BirchBoxProductPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirchBoxProductPage.m; sourceTree = "<group>"; };
 		92616FB418A5395B68607A92 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD527B6ECE44CD70BCD4F53 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,10 +129,8 @@
 				5D8FDB641C7B84CB00FC790A /* ProductData.m */,
 				5D8FDB571C7B7A3C00FC790A /* APIManager.h */,
 				5D8FDB581C7B7A3C00FC790A /* APIManager.m */,
-				5D8FDB601C7B836C00FC790A /* BirchBoxCollectionViewController.h */,
-				5D8FDB611C7B836C00FC790A /* BirchBoxCollectionViewController.m */,
-				5D8FDB661C7B91DE00FC790A /* BirchBoxCollectionViewCell.h */,
-				5D8FDB671C7B91DE00FC790A /* BirchBoxCollectionViewCell.m */,
+				5D8FDB691C7BA10900FC790A /* BirchBoxProductPage.h */,
+				5D8FDB6A1C7BA10900FC790A /* BirchBoxProductPage.m */,
 				5D8FDB2D1C7B77D500FC790A /* Main.storyboard */,
 				5D8FDB301C7B77D600FC790A /* Assets.xcassets */,
 				5D8FDB321C7B77D600FC790A /* LaunchScreen.storyboard */,
@@ -364,11 +359,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D8FDB291C7B77D500FC790A /* AppDelegate.m in Sources */,
-				5D8FDB681C7B91DE00FC790A /* BirchBoxCollectionViewCell.m in Sources */,
-				5D8FDB621C7B836C00FC790A /* BirchBoxCollectionViewController.m in Sources */,
 				5D8FDB261C7B77D500FC790A /* main.m in Sources */,
 				5D8FDB651C7B84CB00FC790A /* ProductData.m in Sources */,
 				5D8FDB591C7B7A3C00FC790A /* APIManager.m in Sources */,
+				5D8FDB6B1C7BA10900FC790A /* BirchBoxProductPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

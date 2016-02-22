@@ -1,5 +1,5 @@
 //
-//  BirchBoxCollectionViewCell.h
+//  BirchBoxProductPage.h
 //  BirchboxApp
 //
 //  Created by Jackie Meggesto on 2/22/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BirchBoxCollectionViewCell : UICollectionViewCell
-
-@property (nonatomic) IBOutlet UILabel* label;
+@interface BirchBoxProductPage : UIViewController
 
 @end

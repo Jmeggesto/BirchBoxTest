@@ -11,7 +11,7 @@
 @interface ProductData : NSObject
 
 @property (nonatomic) NSString* name;
-@property (nonatomic) NSString* reviewCount;
+@property (nonatomic) NSInteger* reviewCount;
 @property (nonatomic) NSString* price;
 @property (nonatomic) NSString* productDescription;
 @property (nonatomic) NSString* howToUse;
