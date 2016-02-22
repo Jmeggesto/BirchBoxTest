@@ -22,6 +22,6 @@
 
 
 
--(id)initWithProductData:(NSArray*)data;
+-(id)initWithProductData:(NSDictionary*)data;
 
 @end

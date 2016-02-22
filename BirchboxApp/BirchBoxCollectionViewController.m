@@ -6,6 +6,7 @@
 //  Copyright © 2016 Jackie Meggesto. All rights reserved.
 //
 
+#import "BirchBoxCollectionViewCell.h"
 #import "APIManager.h"
 #import "BirchBoxCollectionViewController.h"
 #import "ProductData.h"
@@ -18,15 +19,32 @@
 
 @implementation BirchBoxCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"BirchBoxCell";
 
 - (void)viewDidLoad
 {
+    
+//    UIView* navigationItemView = [[UIView alloc]initWithFrame:CGRectMake(100, 100, self.view.frame.origin.x, 80)];
+//    [navigationItemView setBackgroundColor:[UIColor colorWithRed:124.0
+//                                                           green:151.0
+//                                                            blue:176.0 alpha:1.0]];
+//    
+//    UILabel *birchBoxLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 50, 20)];
+//    [birchBoxLabel setTextColor:[UIColor whiteColor]];
+//    [birchBoxLabel setBackgroundColor:[UIColor clearColor]];
+//    [birchBoxLabel setFont:[UIFont fontWithName: @"Avenir Black" size: 40.0f]];
+//    [birchBoxLabel setCenter:navigationItemView.center];
+//    [navigationItemView addSubview:birchBoxLabel];
+//    
+//    [self.navigationItem setTitle:@"BirchBox"];
+//    [self.navigationItem setTitleView:navigationItemView];
+    
     [self setUpProductData];
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+//    [self.collectionView registerClass:[BirchBoxCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    NSLog(@"%@", self.productData);
     
 }
 
@@ -46,6 +64,9 @@ static NSString * const reuseIdentifier = @"Cell";
              withCompletionBlock:^(NSDictionary *data) {
                  
                  ProductData* productData = [[ProductData alloc]initWithProductData:data];
+                 NSLog(@"%@", productData);
+                 
+                 [self.productData addObject:productData];
                  
              }];
     }
@@ -64,14 +85,14 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 #warning Incomplete implementation, return the number of items
-    return self.productData.count;
+    return [self.productData count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
+    BirchBoxCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NSLog(@"hey");
+    cell.label.text = @"hey";
     
     return cell;
 }
